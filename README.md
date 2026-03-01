@@ -1,6 +1,10 @@
 # E2E Test – Payment Flow (Receipt Share Page)
+![Playwright](https://img.shields.io/badge/Tested%20with-Playwright-45ba4b)
+![Node](https://img.shields.io/badge/Node-%3E%3D18-green)
 
 This project contains an End-to-End (E2E) test implemented using Playwright to validate the payment flow on the Receipt Share page.
+
+---
 
 ## 📌 Test Objective
 
@@ -9,13 +13,15 @@ To verify that when a specific test credit card is used, the system displays the
 ---
 
 ## 🔗 Test URL
-https://doc-api-canary.flowaccount.com/api/receipt/share/html/th/jkzzr7vueg6l8j38vrgdq?DoOriginal=1&DoCopies=1
+
+[Receipt Share Page](https://doc-api-canary.flowaccount.com/api/receipt/share/html/th/jkzzr7vueg6l8j38vrgdq?DoOriginal=1&DoCopies=1)
 
 ---
 
 ## 🧪 Test Scenario
 
 ### Scenario 1:
+
 When entering the test credit card:
 
 - Card number: `4242 4242 4242 4242`
@@ -25,10 +31,11 @@ When entering the test credit card:
 ### Expected Result:
 
 A popup/modal must appear with the exact following text:
-...
+
+```
 รายการนี้ไม่สามารถชำระเงินได้
 กรุณาติดต่อผู้ขาย หรือผู้ให้บริการเพื่อทำรายการใหม่อีกครั้ง
-...
+```
 
 The test asserts:
 - The popup is visible
@@ -37,14 +44,17 @@ The test asserts:
 ---
 
 ## 🏗 Project Structure
+
+```
 .
 ├── pages/
 ├── tests/
-│ ├── fixtures/
-│ └── payment.spec.ts
+│   ├── fixtures/
+│   └── payment.spec.ts
 ├── playwright.config.ts
 ├── package.json
 └── README.md
+```
 
 ---
 
@@ -62,39 +72,54 @@ The test asserts:
 - npm v9+
 
 Check your version:
+
+```bash
 node -v
 npm -v
+```
 
 ---
 
 ## 🚀 Installation
 
 Clone the repository:
+```bash
 git clone <your-repo-url>
 cd <your-project-folder>
+```
 
 Install dependencies:
+```bash
 npm ci
+```
 
 Install Playwright browsers:
+```bash
 npx playwright install
+```
 
 ---
 
 ## ▶️ Run Tests
 
 Run in headless mode:
+```bash
 npm test
+```
 
 Run with UI (headed mode):
+```bash
 npm run test:headed
+```
 
 ---
 
 ## 📊 View Test Report
 
 After running tests:
+```bash
 npm run report
+```
 
 This will open the Playwright HTML report.
 
