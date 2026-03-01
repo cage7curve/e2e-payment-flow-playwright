@@ -152,3 +152,9 @@ A short demo video (3–7 minutes) demonstrates:
 - Test execution (pass result)
 - Popup validation
 - Playwright HTML report
+
+## 🤖 Continuous Integration
+
+This project runs Playwright tests automatically on every push and pull request using GitHub Actions.
+
+The HTML report is uploaded as an artifact and can be downloaded from the Actions tab.
