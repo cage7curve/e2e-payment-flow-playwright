@@ -146,7 +146,7 @@ This will open the Playwright HTML report.
 
 ## 🎥 Demo
 
-A short demo video (3–7 minutes) demonstrates:
+https://drive.google.com/file/d/1nxXW5SL7djKLdwpqABOvEnYIg5JPGk0f/view?usp=sharing
 
 - Scenario explanation
 - Test execution (pass result)
