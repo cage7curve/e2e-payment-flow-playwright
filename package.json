@@ -5,6 +5,8 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --headed --ui",
+    "test:repeat": "playwright test --repeat-each=10",
     "report": "playwright show-report"
   },
   "keywords": [],
