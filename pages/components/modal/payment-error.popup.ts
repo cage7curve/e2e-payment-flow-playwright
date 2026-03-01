@@ -12,16 +12,19 @@ export class PaymentErrorPopup {
   }
 
   async expectErrorVisible() {
-    await expect(this.container).toBeVisible();
+    await expect(this.container).toBeVisible({ timeout: 15000 });
 
-    await expect(this.title).toHaveText(
-      "รายการนี้ไม่สามารถชำระเงินได้",
-      { useInnerText: true }
-    );
+    await expect(this.title).toHaveText("รายการนี้ไม่สามารถชำระเงินได้", {
+      timeout: 15000,
+      useInnerText: true,
+    });
 
     await expect(this.description).toHaveText(
       "กรุณาติดต่อผู้ขาย หรือผู้ให้บริการเพื่อทำรายการใหม่อีกครั้ง",
-      { useInnerText: true }
+      {
+        timeout: 15000,
+        useInnerText: true,
+      },
     );
   }
 }

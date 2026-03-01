@@ -23,7 +23,7 @@ test.describe("Payment Flow - Receipt Share Page", () => {
 
     await creditCardPaymentPage.waitForPageReady();
     await creditCardPaymentPage.payWithCard("4242424242424242", "12/30", "123");
-
+   
     // Assert
     await popup.expectErrorVisible();
   });

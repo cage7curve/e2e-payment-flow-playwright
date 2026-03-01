@@ -10,10 +10,6 @@ export class CreditCardPaymentPage extends BasePage {
     name: /ชำระเงิน/,
   });
 
-  private readonly loadingPopup = this.page.locator(
-    ".swal2-popup.swal2-loading",
-  );
-
   private readonly cardNumberFrame = this.page.frameLocator(
   '#card-number-element iframe[title="Secure card number input frame"]',
 );
@@ -58,10 +54,5 @@ export class CreditCardPaymentPage extends BasePage {
     await this.fillCvc(cvc);
 
     await this.submitButton.click();
-
-    await this.loadingPopup.waitFor({
-      state: "hidden",
-      timeout: 15000,
-    });
   }
 }

@@ -12,8 +12,6 @@ export class PaymentMethodPage extends BasePage {
     name: "ไปที่หน้าชำระเงิน",
   });
 
-  private readonly loadingSpinner = this.page.locator(".lds-css");
-
   constructor(page: Page) {
     super(page);
   }
@@ -30,10 +28,5 @@ export class PaymentMethodPage extends BasePage {
 
   async clickNext() {
     await this.nextButton.click();
-
-    await this.loadingSpinner.waitFor({
-      state: "hidden",
-      timeout: 15000,
-    });
   }
 }
