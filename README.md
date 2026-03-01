@@ -84,8 +84,8 @@ npm -v
 
 Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone https://github.com/cage7curve/e2e-payment-flow-playwright.git
+cd FlowAccount
 ```
 
 Install dependencies:
