@@ -15,15 +15,15 @@ export class CreditCardPaymentPage extends BasePage {
   );
 
   private readonly cardNumberFrame = this.page.frameLocator(
-    "#card-number-element iframe",
-  );
+  '#card-number-element iframe[title="Secure card number input frame"]',
+);
 
   private readonly expiryFrame = this.page.frameLocator(
-    "#card-expiry-element iframe",
-  );
+  '#card-expiry-element iframe[title="Secure expiration date input frame"]',
+);
 
   private readonly cvcFrame = this.page.frameLocator(
-    "#card-cvc-element iframe",
+    '#card-cvc-element iframe[title="Secure CVC input frame"]',
   );
 
   constructor(page: Page) {
@@ -49,7 +49,7 @@ export class CreditCardPaymentPage extends BasePage {
   }
 
   async fillCvc(cvc: string) {
-    await this.cvcFrame.getByRole("textbox", { name: "CVC" }).fill(cvc);
+    await this.cvcFrame.getByPlaceholder("CVC/CVV").fill(cvc);
   }
 
   async payWithCard(cardNumber: string, expiry: string, cvc: string) {
